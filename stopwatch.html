@@ -4,19 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .canvas {
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        p {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p .jam{
+            color:green
+        }
+        p .menit{
+            color:red
+        }
+        button{
+            margin-right: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .mulai {
+            background-color: green;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .berhenti {
+            background-color: yellow;
+            color: black;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .reset {
+            background-color: red;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-
-
-    <center>
-        <b>00:00:00</b>
-        <br>
-        <button>Mulai</button>
-        <button>Berhenti</button>
-        <button>Reset</button>
-    </center>
-
-
-    
+    <div class="canvas">
+        <p>
+            <span class="jam">000</span>:<span class="menit">00</span>
+        </p>
+        <button class="mulai">Start Timer</button>
+        <button class="berhenti">Stop Timer</button>
+        <button class="reset">Reset Timer</button>
+    </div>
 </body>
 </html>
